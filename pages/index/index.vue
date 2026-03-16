@@ -4,7 +4,7 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
-		<u-button>打开ActionSheet</u-button>
+		<u-button @click="toList">跳转列表页面</u-button>
 	</view>
 </template>
 
@@ -20,7 +20,11 @@
 
 		},
 		methods: {
-
+			toList() {
+				uni.switchTab({
+					url: '/pages/list/list'
+				})
+			}
 		}
 	}
 </script>
